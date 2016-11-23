@@ -1,0 +1,21 @@
+hub:
+  # https://hub.docker.com/r/selenium/hub/
+  image: selenium/hub
+  ports:
+    - "4444:4444"
+
+firefox:
+  #image: selenium/node-firefox          # without vnc
+  image: selenium/node-firefox-debug     # with vnc https://hub.docker.com/r/selenium/node-firefox-debug/
+  links:
+    - hub
+  ports:
+    - "4501:5900"
+
+chrome:
+  #image: selenium/node-chrome          # without vnc
+  image: selenium/node-chrome-debug     # with vnc https://hub.docker.com/r/selenium/node-chrome-debug/
+  links:
+    - hub
+  ports:
+    - "4502:5900"

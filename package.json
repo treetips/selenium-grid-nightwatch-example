@@ -1,0 +1,21 @@
+{
+  "name": "tree",
+  "version": "1.0.0",
+  "description": "Nightwatch example.",
+  "main": "index.js",
+  "scripts": {
+    "local-chrome": "node_modules/nightwatch/bin/nightwatch -e chrome",
+    "local-firefox": "node_modules/nightwatch/bin/nightwatch -e firefox",
+    "local": "node_modules/nightwatch/bin/nightwatch -e firefox,chrome",
+    "grid": "node_modules/nightwatch/bin/nightwatch --grid=true -e firefox,chrome"
+  },
+  "keywords": [],
+  "author": "tree",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^2.25.1",
+    "geckodriver": "^1.2.0",
+    "nightwatch": "^0.9.9",
+    "selenium-server-standalone-jar": "^3.0.1"
+  }
+}
