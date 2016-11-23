@@ -49,6 +49,23 @@ $ docker-compose up -d
 $ npm install
 ```
 
+### Edit selenium host
+
+You can check the docker-host with the docker-machine ip command.
+```bash
+$ docker-machine ip selenium
+172.16.53.136
+```
+
+Open nightwatch.conf.js and edit selenium_host.
+
+```javascript
+let DEFAULT_CONFIGURATION = {
+	launch_url: "http://localhost",
+	selenium_port: 4444,
+	selenium_host: "172.16.53.136",
+```
+
 ### Run e2e test for local
 
 If execute 'npm run local', start up local chrome or firefox by standalone-selenium without docker and selenium-grid.
